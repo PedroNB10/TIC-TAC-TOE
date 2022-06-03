@@ -1,0 +1,202 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+}
+
+
+body {
+
+	background:  linear-gradient(90deg, rgba(8,248,255,1) 0%, rgba(103,27,235,1) 35%, rgba(255,0,206,1) 91%) ;	
+	text-align: center;
+	font-style:italic;
+	
+}
+
+
+#imagem-ete{
+margin-top: 15px;
+}
+
+
+#res{
+	
+	color: transparent;
+	
+	font-size: 4vh;
+	
+}
+#texto-pag{
+margin-bottom: 30px;
+}
+
+.board{
+
+	
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: repeat(3,auto);
+
+}
+
+
+
+h1{
+    padding-top: 40px;
+	
+}
+
+
+
+
+
+.botoes{
+	 
+	color: transparent;/*deixa os inputs(_) transparentes*/
+	background-color: transparent;
+	border: none;
+	font-size: 0px; 
+	
+	
+}
+
+
+
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before{
+background: rgba(255, 255, 255, 0.3) !important;
+
+
+}
+
+
+
+.caixa-conteudo-class-not{
+
+	pointer-events: none;
+	
+}
+
+.cell{
+	
+	
+	
+	
+	width: 100px;
+	height: 100px;
+	border: 2px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+
+
+.cell.x,
+.cell.circle{
+	
+	cursor: not-allowed;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3){
+	border-top: none;
+
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7){
+border-left: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9){
+border-bottom: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9){
+border-right: none;
+}
+/*Configuração do X criado pelo css*/
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before{
+	
+	content: "";
+	height: calc(100px * 0.15);
+	width: calc(100px * 0.9);
+	background: white;
+	position: absolute;
+	
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before{
+	transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after{
+	transform: rotate(-45deg);
+}
+
+/*Configuração da O criada pelo css*/
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before{
+	
+	content: "";
+	height: calc(100px * 0.9);
+	width: calc(100px * 0.9);
+	background: white;
+	position: absolute;
+	border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#reiniciar {
+	margin-top: 2%;
+	margin-bottom: 5px;
+	width: 150px;
+	height:60px;
+	font-size: 1.3em;
+	color: rgb(255, 255, 255);
+    border-radius: 25px;
+	border: none;
+	background: rgb(19, 143, 245);
+	cursor: pointer;
+}
+
+
+  #reiniciar:hover {
+	background-color: #5dcefa; 
+	color: white;
+  }
+

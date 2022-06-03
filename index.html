@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<title>Jogo da Velha</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;1,400&family=Roboto:wght@300;500&display=swap"
+		rel="stylesheet">
+
+</head>
+
+
+
+<body>
+	
+	
+	<div id="texto-pag">
+		<div id="vez">
+			<h1>Vez do Jogador <span id="jogador"></span></h1>
+		</div>
+		<!--span é como a div, só que a div serve para bloco e o span para linhas-->
+		<span id="res">resposta</span>
+		<!--A "div" pode ser utilizada para agrupar elementos para fins de estilos (usando class ou id)-->
+	</div>
+	
+<div  id="caixa_conteudo-id" class="caixa-conteudo-class" caixa-conteudo>
+	<div id="board_id" class="board" data-board>
+		<!--É o que define o conteúdo principal de uma página para filtrar pesquisas-->
+
+		<div id="celula0" class="cell" data-cell onclick="casa_0()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula1" class="cell" data-cell onclick="casa_1()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula2" class="cell" data-cell onclick="casa_2()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula3" class="cell" data-cell onclick="casa_3()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula4" class="cell" data-cell onclick="casa_4()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula5" class="cell" data-cell onclick="casa_5()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula6" class="cell" data-cell onclick="casa_6()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula7" class="cell" data-cell onclick="casa_7()"><input type="button" value="_" data-botoes class="botoes"></div>
+		<div id="celula8" class="cell" data-cell onclick="casa_8()"><input type="button" value="_" data-botoes class="botoes"></div>
+	</div>
+</div>
+
+	<div>
+		<input type="button" value="Reiniciar" id="reiniciar">
+	</div>
+
+
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>
